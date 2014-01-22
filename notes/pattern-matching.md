@@ -1,40 +1,44 @@
-Pattern match operator ('='):
+# Pattern Matching #
 
-  iex> a = 1
-  iex> a + 3
-  iex> a
-  iex> 1 = a
-  iex> 2 = a
-  iex> a = 2
-  iex> 2 = a
+## Pattern match operator ('='):
 
-Match on lists:
+    iex> a = 1
+    iex> a + 3
+    iex> a
+    iex> 1 = a
+    iex> 2 = a
 
-  iex> [a,b,c] = [1,2,3]
-  iex> a
-  iex> b
-  iex> c
+## Re-binding
 
-Which of the following would match?
+    iex> a = 2
+    iex> 2 = a
+    iex> 1 = a
 
-  iex> a = [1,2,3]
-  iex> a = 4
-  iex> 4 = a
-  iex> [a,b] = [1,2,3]
-  iex> a = [[1,2,3]]
-  iex> [a..5] = [1..5]
-  iex> [a] = [[1,2,3]]
-  iex> [[a]] = [[1,2,3]]
-  iex> [[a,b,c]] = [[1,2,3]]
+## Match on lists:
 
-Ignoring ('_'):
+    iex> [a,b,c] = [1,2,3]
+    iex> a
+    iex> b
+    iex> c
 
-  iex> [a,_] = [1,2]
+## Which of the following would match?
 
-Variables bind once per match:
+    iex> a = [1,2,3]
+    iex> a = 4
+    iex> 4 = a
+    iex> [a,b] = [1,2,3]
+    iex> a = [[1,2,3]]
+    iex> [a..5] = [1..5]
+    iex> [a] = [[1,2,3]]
+    iex> [[a]] = [[1,2,3]]
+    iex> [[a,b,c]] = [[1,2,3]]
 
-  iex> [a,a] = [1,1]
-  iex> a
-  iex> [a,a] = [1,2]
+## Ignoring ('_'):
 
-Force to use an existing value:
+    iex> [a,_] = [1,2]
+
+## Variables bind once per match:
+
+    iex> [a,a] = [1,1]
+    iex> a
+    iex> [a,a] = [1,2]
